@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  jupyter:
+    platform: linux/x86_64
+    build: 
+      context: .
+      args:
+        DIR_WORK: "/work"
+        ENV_YML: "env.yml"
+        VENV: "stats"
+        DIR_CONDA: "/opt/conda"
+        REQ_TXT: "requirements.txt"
+    image: biobr131/py-r-stats:latest
+    container_name: jupyter
+    command: jupyter lab --ip=0.0.0.0 --allow-root --LabApp.token=''
+    ports:
+     - "8888:8888"
+    volumes:
+     - ./code:/work/code
+    tty: true
+    stdin_open: true
