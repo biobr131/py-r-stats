@@ -1,2 +1,24 @@
+black
+ruff
+mypy
+tox
+pytest
+pytest-snapshot
+structlog
+pytest-structlog
+line_profiler
+memory_profiler
+pandas[performance, plot, computation, excel]
 polars-lts-cpu
-jupyter_ai
+statsmodels
+japanize-matplotlib
+seaborn
+fastcluster
+statannotations
+requests
+scikit-learn
+jupyterlab
+ipywidgets
+ipympl
+streamlit
+pygwalker
