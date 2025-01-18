@@ -15,7 +15,8 @@ COPY ${DIR_MFAPY}/ ${DIR_WORK}/${DIR_MFAPY}
 ARG ENV_YML
 ARG VENV
 RUN conda update -y -c conda-forge conda && \
-    conda env create --file ${ENV_YML}
+    conda env create --file ${ENV_YML} && \
+    conda clean -i -t -y
 
 ARG DIR_CONDA
 ENV PATH ${DIR_CONDA}/envs/${VENV}/bin:$PATH
