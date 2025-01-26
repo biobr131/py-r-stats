@@ -10,6 +10,7 @@ line_profiler
 memory_profiler
 pandas[performance, plot, computation, excel]
 polars-lts-cpu
+ibis-framework[pandas, polars]
 statsmodels
 japanize-matplotlib
 seaborn
