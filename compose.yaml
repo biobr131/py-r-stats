@@ -4,7 +4,7 @@ services:
     build: 
       context: .
       args:
-        DIR_WORK: "/work"
+        DIR_WORK: "/usr/src/app"
         ENV_YML: "environment.yaml"
         VENV: "stats"
         DIR_CONDA: "/opt/conda"
@@ -15,6 +15,6 @@ services:
     ports:
      - "8888:8888"
     volumes:
-     - ./scripts:/work/scripts
+     - .:/usr/src/app
     tty: true
     stdin_open: true
